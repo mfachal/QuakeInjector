@@ -118,7 +118,15 @@ public class Configuration {
 	
 
 	public class RogueInstalled extends BooleanValue {
-		private RogueInstalled() { super("rogueInstalled", false); }
+	    private RogueInstalled() {
+		boolean rogueInstalled = IsRogueInstalledp(enginePath);
+
+		super("rogueInstalled", false);
+	    }
+
+	    private IsRogueInstalledp(enginePath){
+		//TODO: check if ./rogue/pak1.pak exists
+	    }
 	}
 	public final RogueInstalled RogueInstalled = new RogueInstalled();
 
